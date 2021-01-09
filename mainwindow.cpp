@@ -165,7 +165,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    if(!ui->lineEdit->text().isEmpty()){
+
     //ui->comboBox->setCurrentIndex(23);
     std::vector<std::string> ipv4=input_string_to_vector(ui->lineEdit->text().toUtf8().constData());
     std::string temp_string_ipv4=(ui->lineEdit->text()).toUtf8().constData();
@@ -184,7 +184,7 @@ void MainWindow::on_pushButton_clicked()
     ui->label_6->setText("HostMax - "+QString::fromStdString(show_vect(binary_to_decim(maximal(binary_addr(ipv4),ui->comboBox->currentIndex())))));
     //class ipv4
     ui->label_7->setText("Class: "+QString::fromStdString(ip_class(ipv4)));
-}
+
 }
 
 
